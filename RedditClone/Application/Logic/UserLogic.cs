@@ -21,9 +21,10 @@ public class UserLogic : IUserLogic
         if (existing != null)
             throw new Exception("Username is taken.");
 
+        //then check that it follows legal rules, then add it
         ValidateData(userToCreate);
         User toCreate = new User
-        {
+        {//set the details. this is what appears in Swagger when you try it out
             Username = userToCreate.Username,
             Password = userToCreate.Password
         };

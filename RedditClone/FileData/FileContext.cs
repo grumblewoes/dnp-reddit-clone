@@ -8,7 +8,7 @@ public class FileContext //reads/writes
     private const string filePath = "data.json";
     private DataContainer? dataContainer;
 
-    public ICollection<Post> Todos //lazy reload
+    public ICollection<Post> Posts //lazy reload
     {
         get
         {
