@@ -1,4 +1,6 @@
+using System.Globalization;
 using Application.DAOInterfaces;
+using Domain.DTOs;
 using Domain.Models;
 
 namespace FileData.DAOs;
@@ -29,5 +31,30 @@ public class PostDAO : IPostDAO
         context.SaveChanges();
 
         return Task.FromResult(post);
+    }
+    //gets all posts searching by author, authorId or Title
+    public Task<IEnumerable<Post>> GetAsync(SearchPostParametersDto searchParameters)
+    {
+        IEnumerable<Post> posts = context.Posts.AsEnumerable();
+
+        if (!string.IsNullOrEmpty(searchParameters.Username))
+        {
+            //author is unique
+            posts = context.Posts.Where(p =>
+                p.Author.Equals(searchParameters.Username, StringComparison.OrdinalIgnoreCase));
+            
+        }
+        if (searchParameters.PostId != null)
+        {
+            posts = posts.Where(p => p.Id == searchParameters.PostId);
+        }
+
+        if (!string.IsNullOrEmpty(searchParameters.TitleContains))
+        {
+            posts = posts.Where(p =>
+                p.Title.Contains(searchParameters.TitleContains, StringComparison.OrdinalIgnoreCase));
+        }
+
+        return Task.FromResult(posts);
     }
 }

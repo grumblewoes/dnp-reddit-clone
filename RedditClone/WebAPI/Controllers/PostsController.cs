@@ -30,4 +30,25 @@ public class PostsController: ControllerBase
             return StatusCode(500, e.Message);
         }
     }
+
+    [HttpGet]
+    public async Task<ActionResult<IEnumerable<Post>>> GetAsync([FromQuery] string? author,
+        [FromQuery] int? postId, [FromQuery] string? titleContains)
+    {
+        try
+        {
+            SearchPostParametersDto parameters = new SearchPostParametersDto(author, postId, titleContains);
+            var posts = await postLogic.GetAsync(parameters);
+            if (!posts.Any())
+            {
+                return NotFound("No posts found matching the search criteria.");
+            }
+            return Ok(posts);
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            return StatusCode(500, e.Message);
+        }
+    }
 }

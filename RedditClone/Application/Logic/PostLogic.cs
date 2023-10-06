@@ -28,4 +28,9 @@ public class PostLogic : IPostLogic
         Post created = await postDAO.CreateAsync(toCreate);
         return created;
     }
+
+    public Task<IEnumerable<Post>> GetAsync(SearchPostParametersDto searchPostParameters)
+    {
+        return postDAO.GetAsync(searchPostParameters);
+    }
 }
