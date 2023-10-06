@@ -31,7 +31,7 @@ public class PostsController: ControllerBase
         }
     }
 
-    [HttpGet]
+    [HttpGet("search")]
     public async Task<ActionResult<IEnumerable<Post>>> GetAsync([FromQuery] string? author,
         [FromQuery] int? postId, [FromQuery] string? titleContains)
     {
@@ -42,6 +42,24 @@ public class PostsController: ControllerBase
             if (!posts.Any())
             {
                 return NotFound("No posts found matching the search criteria.");
+            }
+            return Ok(posts);
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            return StatusCode(500, e.Message);
+        }
+    }
+    [HttpGet]
+    public async Task<ActionResult<IEnumerable<Post>>> GetAllPosts()
+    {
+        try
+        {
+            var posts = await postLogic.GetAllPosts();
+            if (!posts.Any())
+            {
+                return NotFound("No posts found.");
             }
             return Ok(posts);
         }

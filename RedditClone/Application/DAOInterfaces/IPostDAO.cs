@@ -7,4 +7,5 @@ public interface IPostDAO
 {
     Task<Post> CreateAsync(Post post);
     Task<IEnumerable<Post>> GetAsync(SearchPostParametersDto searchParameters);
+    Task<IEnumerable<Post>> GetAllAsync();
 }
