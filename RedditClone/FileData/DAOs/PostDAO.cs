@@ -33,7 +33,7 @@ public class PostDAO : IPostDAO
         return Task.FromResult(post);
     }
     //gets all posts searching by author, authorId or Title
-    public Task<IEnumerable<Post>> GetAsync(SearchPostParametersDto searchParameters)
+    public Task<IEnumerable<Post>> GetBySearchAsync(SearchPostParametersDTO searchParameters)
     {
         IEnumerable<Post> posts = context.Posts.AsEnumerable();
 
@@ -62,5 +62,11 @@ public class PostDAO : IPostDAO
     {
         IEnumerable<Post> allPosts = context.Posts.ToList();
         return Task.FromResult(allPosts);
+    }
+
+    public Task<Post?> GetByIdAsync(int id)
+    {
+        Post? post = context.Posts.FirstOrDefault(p => p.Id == id);
+        return Task.FromResult(post);
     }
 }

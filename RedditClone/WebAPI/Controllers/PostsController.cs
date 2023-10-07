@@ -32,13 +32,13 @@ public class PostsController: ControllerBase
     }
 
     [HttpGet("search")]
-    public async Task<ActionResult<IEnumerable<Post>>> GetAsync([FromQuery] string? author,
+    public async Task<ActionResult<IEnumerable<Post>>> GetBySearchAsync([FromQuery] string? author,
         [FromQuery] int? postId, [FromQuery] string? titleContains)
     {
         try
         {
-            SearchPostParametersDto parameters = new SearchPostParametersDto(author, postId, titleContains);
-            var posts = await postLogic.GetAsync(parameters);
+            SearchPostParametersDTO parameters = new SearchPostParametersDTO(author, postId, titleContains);
+            var posts = await postLogic.GetBySearchAsync(parameters);
             if (!posts.Any())
             {
                 return NotFound("No posts found matching the search criteria.");
@@ -62,6 +62,25 @@ public class PostsController: ControllerBase
                 return NotFound("No posts found.");
             }
             return Ok(posts);
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            return StatusCode(500, e.Message);
+        }
+    }
+    
+    [HttpGet("id")]
+    public async Task<ActionResult<Post>> GetPostById([FromQuery] int id)
+    {
+        try
+        {
+            var post = await postLogic.GetByIdAsync(id);
+            if (post == null)
+            {
+                return NotFound("No post with the ID " + id + " were found.");
+            }
+            return Ok(post);
         }
         catch (Exception e)
         {

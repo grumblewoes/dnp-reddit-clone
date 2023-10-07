@@ -1,12 +1,12 @@
 ﻿namespace Domain.DTOs;
 
-public class SearchPostParametersDto
+public class SearchPostParametersDTO
 {
     public string? Username { get;  }
     public int? PostId { get;  }
     public string? TitleContains { get; }
 
-    public SearchPostParametersDto(string? username, int? postId, string? titleContains)
+    public SearchPostParametersDTO(string? username, int? postId, string? titleContains)
     {
         Username = username;
         PostId= postId;

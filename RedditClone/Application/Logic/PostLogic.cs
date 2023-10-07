@@ -29,13 +29,18 @@ public class PostLogic : IPostLogic
         return created;
     }
     // gets posts based on search
-    public Task<IEnumerable<Post>> GetAsync(SearchPostParametersDto searchPostParameters)
+    public Task<IEnumerable<Post>> GetBySearchAsync(SearchPostParametersDTO searchPostParameters)
     {
-        return postDAO.GetAsync(searchPostParameters);
+        return postDAO.GetBySearchAsync(searchPostParameters);
     }
     //gets all posts
     public async Task<IEnumerable<Post>> GetAllPosts()
     {
         return await postDAO.GetAllAsync();
+    }
+
+    public async Task<Post?> GetByIdAsync(int id)
+    {
+        return await postDAO.GetByIdAsync(id);
     }
 }
