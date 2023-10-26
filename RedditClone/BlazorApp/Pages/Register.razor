@@ -1,11 +1,13 @@
-@page "/Login"
+@page "/Register"
 @using BlazorApp.Services
+@using Domain.Models
 @inject IAuthService authService
 @inject NavigationManager navMgr
+
 <AuthorizeView>
     <NotAuthorized>
         <div class="card">
-            <h3>Please login</h3>
+            <h3>Create an Account</h3>
             <div class="field">
                 <label>User name:</label>
                 <input type="text" @bind="userName"/>
@@ -23,8 +25,7 @@
                 </div>
             }
             <div class="field">
-                <button class="loginbtn" @onclick="LoginAsync">Log in</button>
-                <p>Not a user? <a href="/Register">Register</a></p>
+                <button class="loginbtn" @onclick="RegisterAsync">Register</button>
             </div>
         </div>
     </NotAuthorized>
@@ -40,13 +41,18 @@
     private string password;
     private string errorLabel;
 
-    private async Task LoginAsync()
+    private async Task RegisterAsync()
     {
         errorLabel = "";
         try
         {
-            await authService.LoginAsync(userName, password);
-            navMgr.NavigateTo("/");
+            User user = new User
+            {
+                Username = userName,
+                Password = password
+            };
+            await authService.RegisterAsync(user);
+            navMgr.NavigateTo("/Login");
         }
         catch (Exception e)
         {

@@ -30,14 +30,4 @@ public class AuthLogic : IAuthLogic
 
         return Task.FromResult(existingUser);
     }
-
-    public Task LoginAsync(string username, string password)
-    {
-        throw new NotImplementedException();
-    }
-
-    public Task LogoutAsync()
-    {
-        throw new NotImplementedException();
-    }
 }

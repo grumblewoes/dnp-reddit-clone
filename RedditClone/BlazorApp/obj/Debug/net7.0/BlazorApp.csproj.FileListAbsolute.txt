@@ -856,3 +856,4 @@ C:\Users\Anna\Documents\VIA\Semester 3\DNP\dnp-reddit-clone\RedditClone\BlazorAp
 C:\Users\Anna\Documents\VIA\Semester 3\DNP\dnp-reddit-clone\RedditClone\BlazorApp\obj\Debug\net7.0\BlazorApp.pdb
 C:\Users\Anna\Documents\VIA\Semester 3\DNP\dnp-reddit-clone\RedditClone\BlazorApp\obj\Debug\net7.0\ref\BlazorApp.dll
 C:\Users\Anna\Documents\VIA\Semester 3\DNP\dnp-reddit-clone\RedditClone\BlazorApp\obj\Debug\net7.0\scopedcss\Pages\LoginButton.razor.rz.scp.css
+C:\Users\Anna\Documents\VIA\Semester 3\DNP\dnp-reddit-clone\RedditClone\BlazorApp\obj\Debug\net7.0\scopedcss\Pages\Register.razor.rz.scp.css
