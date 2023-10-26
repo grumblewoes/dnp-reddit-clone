@@ -6,3 +6,7 @@
 /RedditClone/FileData/obj/
 /RedditClone/WebAPI/bin/
 /RedditClone/WebAPI/obj/
+/RedditClone/Application/obj/
+/RedditClone/BlazorApp/bin/
+/RedditClone/BlazorApp/obj/
+/RedditClone/WebAPI/obj/

@@ -53,7 +53,7 @@ public class PostsController: ControllerBase
             return StatusCode(500, e.Message);
         }
     }
-    [HttpGet]
+    [HttpGet, AllowAnonymous]
     public async Task<ActionResult<IEnumerable<Post>>> GetAllPosts()
     {
         try
@@ -72,7 +72,7 @@ public class PostsController: ControllerBase
         }
     }
     
-    [HttpGet("id")]
+    [HttpGet("id"), AllowAnonymous]
     public async Task<ActionResult<Post>> GetPostById([FromQuery] int id)
     {
         try

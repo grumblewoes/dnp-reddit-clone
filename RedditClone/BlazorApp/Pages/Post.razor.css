@@ -1,0 +1,11 @@
+div {
+    padding: 0.5rem;
+    margin: 0.5rem;
+    border: 1px solid grey;
+    border-radius: 5px;
+    background-color: #e7e7e7;
+}
+
+h5, #author {
+    display: inline-block;
+}

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "EQHG9tYUoCd4GbGIOZ4uJdGM46J72yexJumkRrYE1cb3n2vdQp+N5pRolmAwnqogSdHgbLh9sg2LOtp/dM+vpA==",
+  "dgSpecHash": "AyNZYzknYvgDUOBj2pcHpPfA4GJK4YUoEmRaaPHmxgRiVRtZ0Hzp565uEI51K8idVJXheUVuRE6++kgDa9AjJQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Anna\\Documents\\VIA\\Semester 3\\DNP\\dnp-reddit-clone\\RedditClone\\BlazorApp\\BlazorApp.csproj",
+  "projectFilePath": "C:\\Users\\Anna\\Documents\\Code\\Github Repos\\dnp-reddit-clone\\RedditClone\\BlazorApp\\BlazorApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Anna\\.nuget\\packages\\microsoft.aspnetcore.authorization\\7.0.13\\microsoft.aspnetcore.authorization.7.0.13.nupkg.sha512",
     "C:\\Users\\Anna\\.nuget\\packages\\microsoft.aspnetcore.components\\7.0.13\\microsoft.aspnetcore.components.7.0.13.nupkg.sha512",
@@ -34,7 +34,7 @@
     "C:\\Users\\Anna\\.nuget\\packages\\system.io.pipelines\\7.0.0\\system.io.pipelines.7.0.0.nupkg.sha512",
     "C:\\Users\\Anna\\.nuget\\packages\\system.text.encodings.web\\7.0.0\\system.text.encodings.web.7.0.0.nupkg.sha512",
     "C:\\Users\\Anna\\.nuget\\packages\\system.text.json\\7.0.0\\system.text.json.7.0.0.nupkg.sha512",
-    "C:\\Users\\Anna\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\7.0.7\\microsoft.netcore.app.runtime.mono.browser-wasm.7.0.7.nupkg.sha512"
+    "C:\\Users\\Anna\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\7.0.10\\microsoft.netcore.app.runtime.mono.browser-wasm.7.0.10.nupkg.sha512"
   ],
   "logs": []
 }

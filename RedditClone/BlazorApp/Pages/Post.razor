@@ -1,0 +1,16 @@
+<div>
+    <h5><b>@Title</b></h5>
+    <p id="author">by <em>@Author</em></p>
+    <p>@Body</p>
+</div>
+
+@code {
+    [Inject]
+    private HttpClient client { get; set; }
+    [Parameter] public int Id { get; set; }
+    [Parameter] public string Title { get; set; }
+    [Parameter] public string Author { get; set; }
+    [Parameter] public string Body { get; set; }
+
+
+}

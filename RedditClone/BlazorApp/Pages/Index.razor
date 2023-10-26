@@ -1,15 +1,29 @@
 ﻿@page "/"
+<PageTitle>Dashboard</PageTitle>
+<h1>Dashboard</h1>
 
-<PageTitle>Index</PageTitle>
+@if (posts == null)
+{
+    <p>
+        <em>Loading...</em>
+    </p>
+}
+else
+{
+    @foreach (var post in posts)
+    {
+        <Post Id="@post.Id" Title="@post.Title" Author="@post.Author" Body="@post.Body"/>
+    }
+}
 
-<h1>Hello, world!</h1>
-
-Welcome to your new app.
-
-<AuthorizeView>
-    <Authorized>
-        <p>You are now logged in as @context.User.Identity.Name</p>
-    </Authorized>
-</AuthorizeView>
-
-<SurveyPrompt Title="How is Blazor working for you?"/>
+@code {
+    private Post[]? posts;
+    [Inject]
+    private HttpClient client { get; set; }
+    
+    protected override async Task OnInitializedAsync()
+    {
+        posts = await client.GetFromJsonAsync<Post[]>("http://localhost:5291/posts");
+    }
+    
+}
