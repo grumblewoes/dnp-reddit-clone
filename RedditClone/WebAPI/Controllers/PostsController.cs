@@ -1,11 +1,13 @@
 using Application.LogicInterfaces;
 using Domain.DTOs;
 using Domain.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace WebAPI.Controllers;
 
 [ApiController]
+[Authorize]
 [Route("[controller]")]
 public class PostsController: ControllerBase
 {
@@ -31,7 +33,7 @@ public class PostsController: ControllerBase
         }
     }
 
-    [HttpGet("search")]
+    [HttpGet("search"), AllowAnonymous]
     public async Task<ActionResult<IEnumerable<Post>>> GetBySearchAsync([FromQuery] string? author,
         [FromQuery] int? postId, [FromQuery] string? titleContains)
     {
