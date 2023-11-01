@@ -38,7 +38,7 @@ public class PostHttpClient:IPostService
 
     public async Task CreateAsync(string title, string body, string nickname)
     {
-        // client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", JwtAuthService.Jwt);
+         client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", JwtAuthService.Jwt);
         
         // string postAsJson = JsonSerializer.Serialize(CreatePostDto(title, body, nickname));
         // StringContent content = new(postAsJson, Encoding.UTF8, "application/json");
