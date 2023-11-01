@@ -7,25 +7,6 @@
     </div>
 </div>
 
-<div class="@NavMenuCssClass nav-scrollable" @onclick="ToggleNavMenu">
-    <nav class="flex-column">
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
-                <span class="oi oi-home" aria-hidden="true"></span> Home
-            </NavLink>
-        </div>
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="CreatePost">
-                <span class="oi oi-plus" aria-hidden="true"></span> Create Post yo
-            </NavLink>
-        </div>
-        <div class="nav-item px-3">
-                    <NavLink class="nav-link" href="SelectedPost">
-                        <span class="oi oi-plus" aria-hidden="true"></span> Look at post yo
-                    </NavLink>
-                </div>
-    </nav>
-</div>
 
 @code {
     private bool collapseNavMenu = true;
