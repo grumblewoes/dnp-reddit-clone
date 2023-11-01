@@ -4,20 +4,24 @@
 @inject NavigationManager navmgr
 @inject IPostService PostService
 
-
+<div class="page-container">
 <PageTitle>Index</PageTitle>
 
-<h1> fake Reddit homepage</h1>
+<h1 style="color: white"> Fake Reddit Tihi</h1>
 
 
 <AuthorizeView>
     <Authorized>
-        <p>You are now logged in as @context.User.Identity.Name</p>
-        <MudButton Variant="Variant.Filled" Color="Color.Primary" OnClick="@CreatePostPage">Create</MudButton>
-        
+        <MudCard>
+            <MudCardContent>
+                <MudTypography Typo="Typo.h3" >You are now logged in as , @context.User.Identity.Name</MudTypography>
+            </MudCardContent>
+        </MudCard>
         
     </Authorized>
 </AuthorizeView>
+<MudButton Variant="Variant.Filled" Color="Color.Primary" OnClick="@CreatePostPage">Create Great Post</MudButton>
+<br/>
 
 @if (RedditPosts == null)
 {
@@ -37,6 +41,7 @@ else
         
     }
 }
+</div>
 @code {
     private ICollection<PostBasicDto> RedditPosts;
     private string errorMessage;
@@ -67,8 +72,15 @@ else
     
 }
 <style>
+ .page-container {
+        background-image: url(img/cartman.jpg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+    }
     .posts {
     margin-bottom: 1%;
     max-width: 300px;
     }   
+    
 </style>

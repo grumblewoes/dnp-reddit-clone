@@ -2,36 +2,31 @@
 @using BlazorApp.Services
 @inject IAuthService authService
 @inject NavigationManager navMgr
+
 <AuthorizeView>
     <NotAuthorized>
-        <div class="card">
-            <h3>Please login</h3>
-            <div class="field">
-                <label>User name:</label>
-                <input type="text" @bind="userName"/>
-            </div>
-            <div class="field">
-                <label style="text-align: center">Password:</label>
-                <input type="password" @bind="password"/>
-            </div>
-            @if (!string.IsNullOrEmpty(errorLabel))
-            {
-                <div class="field">
-                    <label style="color: red">
-                        @errorLabel
-                    </label>
-                </div>
-            }
-            <div class="field">
-                <button class="loginbtn" @onclick="LoginAsync">Log in</button>
-                <p>Not a user? <a href="/Register">Register</a></p>
-            </div>
-        </div>
+        <MudCard>
+           <MudCardContent>
+               <MudTypography Typo="Typo.h3">Please login</MudTypography>
+               <MudTextField Label="User name" @bind-Value="userName" />
+               <MudTextField Label="Password" Type="password" @bind-Value="password" />
+               @if (!string.IsNullOrEmpty(errorLabel))
+               {
+                   <MudAlert Severity="Severity.Error">@errorLabel</MudAlert>
+               }
+           </MudCardContent>
+           <MudCardActions>
+               <MudButton Variant="Variant.Filled" Color="Color.Primary" @onclick="LoginAsync">Log in</MudButton>
+               <MudText>Not a user? <MudLink Href="/Register">Register</MudLink></MudText>
+           </MudCardActions>
+       </MudCard>
     </NotAuthorized>
     <Authorized>
-        <div class="card">
-            <h3>Hello, @context.User.Identity.Name</h3>
-        </div>
+        <MudCard>
+            <MudCardContent>
+                <MudTypography Typo="Typo.h3">Hello, @context.User.Identity.Name</MudTypography>
+            </MudCardContent>
+        </MudCard>
     </Authorized>
 </AuthorizeView>
 
@@ -55,3 +50,5 @@
         }
     }
 }
+
+

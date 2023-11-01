@@ -28,57 +28,45 @@
   "Posts": [
     {
       "Id": 2,
-      "Author": "string",
-      "Title": "string",
-      "Body": "string"
+      "Author": "Who",
+      "Title": "My Code vs. Me: A Love-Hate Relationship",
+      "Body": "Exploring the emotional rollercoaster of debugging and troubleshooting code, from exuberant highs to crushing lows"
     },
     {
       "Id": 3,
-      "Author": "string",
-      "Title": "ewqg",
-      "Body": "string"
+      "Author": "Bob",
+      "Title": "The Day I Realized \u0027404\u0027 Wasn\u0027t an Area Code",
+      "Body": "A humorous account of a novice coder\u0027s initial confusion when encountering HTTP error codes"
     },
     {
       "Id": 4,
-      "Author": "string",
-      "Title": "ewqg",
-      "Body": "string"
+      "Author": "Alice",
+      "Title": "Ctrl \u002B Z: The Real-Life Undo Button",
+      "Body": "Imagine the chaos if we had a real-life undo button for everyday life decisions. A fun exploration of this concept"
     },
     {
       "Id": 5,
-      "Author": "string",
-      "Title": "string",
-      "Body": "string"
+      "Author": "Asked",
+      "Title": "My Social Life: True or False?",
+      "Body": "Comparing Boolean logic to real-life situations, with anecdotes of how programming logic might relate to personal relationships"
     },
     {
       "Id": 6,
       "Author": "Asia",
-      "Title": "dawsdwad",
-      "Body": "dsadwq"
+      "Title": "The Art of Naming Variables: The Struggle Is Real",
+      "Body": " A humorous look at the struggle of choosing meaningful variable names and how it can feel like naming your first-born child."
     },
     {
       "Id": 7,
-      "Author": "mmm",
-      "Title": "wqeweq",
-      "Body": "dsads"
+      "Author": "George",
+      "Title": "The Hitchhiker\u0027s Guide to Debugging: A Journey to the Unknown",
+      "Body": " A comical comparison between debugging code and hitchhiking through the cosmos, exploring the unexpected."
     },
     {
       "Id": 8,
       "Author": "mmm",
-      "Title": "dwads",
-      "Body": "dwads"
-    },
-    {
-      "Id": 9,
-      "Author": "mmm",
-      "Title": "BIG TITLE",
-      "Body": "idk"
-    },
-    {
-      "Id": 10,
-      "Author": "mmm",
-      "Title": "dsad",
-      "Body": "dsad"
+      "Title": "ewqe",
+      "Body": "sadwqdwadwadw"
     }
   ]
 }

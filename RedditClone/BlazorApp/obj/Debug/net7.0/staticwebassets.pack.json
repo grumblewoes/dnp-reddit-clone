@@ -81,6 +81,14 @@
       "PackagePath": "staticwebassets\\img\\Logout.png"
     },
     {
+      "Id": "C:\\Users\\sliwa\\workspacemain\\intelij\\dnp-reddit-clone1\\RedditClone\\BlazorApp\\wwwroot\\img\\cartman.jpg",
+      "PackagePath": "staticwebassets\\img\\cartman.jpg"
+    },
+    {
+      "Id": "C:\\Users\\sliwa\\workspacemain\\intelij\\dnp-reddit-clone1\\RedditClone\\BlazorApp\\wwwroot\\img\\fakereddit.png",
+      "PackagePath": "staticwebassets\\img\\fakereddit.png"
+    },
+    {
       "Id": "C:\\Users\\sliwa\\workspacemain\\intelij\\dnp-reddit-clone1\\RedditClone\\BlazorApp\\wwwroot\\index.html",
       "PackagePath": "staticwebassets\\index.html"
     },
