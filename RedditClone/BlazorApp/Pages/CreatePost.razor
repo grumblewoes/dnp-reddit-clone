@@ -18,7 +18,7 @@
                         <MudTextField T="string" Required="true" Label="Title" RequiredError="User name is required" @bind-Value="postTitle"></MudTextField>
                         <MudTextField id="bigText" T="string" Required="true" Label="Whats on your mind?.." RequiredError="text is required"
                                       Variant="Variant.Outlined" Lines="4" Counter="450" MaxLength="450" Immediate="true"
-                                      @bind-value="postBody"></MudTextField>
+                                      @bind-Value="postBody"></MudTextField>
                         <MudButton id="create" Variant="Variant.Filled" Color="Color.Primary" Disabled="@(!isSucced)"
                                    Class="ml-auto" @onclick="Create">Create</MudButton>
                     </MudForm>
@@ -34,10 +34,10 @@
 </AuthorizeView>
 
 @code {
-    private string postTitle = "";
-    private string postBody = "";
-    private string msg = "";
-    private string? author = "";
+    private string postTitle;
+    private string postBody;
+    private string msg;
+    private string? author;
     private bool isSucced;
 
     [CascadingParameter]
@@ -51,48 +51,21 @@
         ClaimsPrincipal user = authState.User;
 
         userClaims = user.Claims;
-    
-        var givenNameClaim = user.Claims.FirstOrDefault(claim => claim.Type.Equals(ClaimTypes.GivenName));
-    
-        if (givenNameClaim != null)
-        {
-            author = givenNameClaim.Value;
-        }
-        else
-        {
-    // Handle the case where the claim is not found.
-            Console.WriteLine("claim not found");
-    // You can set a default value or take appropriate action.
-        }
+        author = user.Claims.First(claim => claim.Type.Equals(ClaimTypes.Name)).Value.ToString();
     }
 
-
-
-    private async Task Create()
-    {
-        msg = "";
-
-
-        if (string.IsNullOrEmpty(postTitle))
+     private async Task Create()
         {
-            msg = "Title cannot be empty!";
-            return;
+            try
+            {
+                await postService.CreateAsync(postTitle, postBody,author);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
         }
-        if (string.IsNullOrEmpty(postBody))
-        {
-            msg = "Body cannot be empty!";
-            return;
-        }
-        try
-        {
-            await postService.CreateAsync(postTitle, postBody, author);
-        }
-        catch (Exception e)
-        {
-            Console.WriteLine(e);
-            msg = e.Message;
-        }
-    }
     
     private async Task RedirectToLogin()
     {
@@ -101,4 +74,21 @@
     }
 
 }
+<style>
+    #create{
+    margin-top: 5%;
+    }
+    #nickname{
+    margin-bottom: 5%;
+    background-color: #f8ca91;
+    border-radius: 5px;
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+           
+    }
+</style>
 

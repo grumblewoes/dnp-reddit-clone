@@ -20,7 +20,7 @@ public class PostsController: ControllerBase
     }
 
     
-    [HttpPost, Route("Create"), Authorize]
+    [HttpPost, Route("Create")]
     public async Task<ActionResult> CreatePostAsync([FromBody] PostCreationDTO postToBeCreated)
     {
         try

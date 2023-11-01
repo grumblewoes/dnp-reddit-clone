@@ -39,6 +39,7 @@ else
 }
 @code {
     private ICollection<PostBasicDto> RedditPosts;
+    private string errorMessage;
     
     protected override async Task OnInitializedAsync()
     {
@@ -49,7 +50,8 @@ else
         catch (Exception e)
         {
             RedditPosts = null;
-            throw new Exception("Big sad");
+            errorMessage = e.Message;
+            throw new Exception(e.Message);
         }
     }
 
@@ -64,3 +66,9 @@ else
     }
     
 }
+<style>
+    .posts {
+    margin-bottom: 1%;
+    max-width: 300px;
+    }   
+</style>

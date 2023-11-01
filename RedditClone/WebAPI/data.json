@@ -1,0 +1,72 @@
+{
+  "Users": [
+    {
+      "Username": "Asia",
+      "Password": "a",
+      "NickName": null,
+      "Posts": null
+    },
+    {
+      "Username": "Kuba",
+      "Password": "k",
+      "NickName": null,
+      "Posts": null
+    },
+    {
+      "Username": "mmm",
+      "Password": "mmm",
+      "NickName": null,
+      "Posts": null
+    },
+    {
+      "Username": "Kuba1",
+      "Password": "k",
+      "NickName": null,
+      "Posts": null
+    }
+  ],
+  "Posts": [
+    {
+      "Id": 2,
+      "Author": "string",
+      "Title": "string",
+      "Body": "string"
+    },
+    {
+      "Id": 3,
+      "Author": "string",
+      "Title": "ewqg",
+      "Body": "string"
+    },
+    {
+      "Id": 4,
+      "Author": "string",
+      "Title": "ewqg",
+      "Body": "string"
+    },
+    {
+      "Id": 5,
+      "Author": "string",
+      "Title": "string",
+      "Body": "string"
+    },
+    {
+      "Id": 6,
+      "Author": "Asia",
+      "Title": "dawsdwad",
+      "Body": "dsadwq"
+    },
+    {
+      "Id": 7,
+      "Author": "mmm",
+      "Title": "wqeweq",
+      "Body": "dsads"
+    },
+    {
+      "Id": 8,
+      "Author": "mmm",
+      "Title": "dwads",
+      "Body": "dwads"
+    }
+  ]
+}

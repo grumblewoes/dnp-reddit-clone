@@ -54,7 +54,7 @@ public class PostLogic : IPostLogic
     {
         Post? redditpost = await postDAO.GetByIdAsync(postDto.id);
 
-        return new PostFullDto()
+        return new PostFullDto
         {
             PostTitle = redditpost.Title,
             PostContext = redditpost.Body,
