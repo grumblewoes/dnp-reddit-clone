@@ -1,3 +1,4 @@
+using Application.Logic;
 using Application.LogicInterfaces;
 using Domain.DTOs;
 using Domain.Models;
@@ -6,8 +7,8 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace WebAPI.Controllers;
 
+    
 [ApiController]
-[Authorize]
 [Route("[controller]")]
 public class PostsController: ControllerBase
 {
@@ -17,19 +18,32 @@ public class PostsController: ControllerBase
     {
         this.postLogic = postLogic;
     }
+
     
-    [HttpPost]
-    public async Task<ActionResult<Post>> CreateAsync(PostCreationDTO dto)
+    [HttpPost, Route("Create"), Authorize]
+    public async Task<ActionResult> CreatePostAsync([FromBody] PostCreationDTO postToBeCreated)
     {
         try
         {
-            Post post = await postLogic.CreateAsync(dto);
-            return Created($"/post/{post.Id}", post);
+            await postLogic.CreateAsync(postToBeCreated);
+            return Ok();
         }
         catch (Exception e)
         {
-            Console.WriteLine(e);
-            return StatusCode(500, e.Message);
+            return BadRequest(e.Message);
+        }
+    }
+    [HttpPost, Route("Post")]
+    public async Task<ActionResult> getAsync([FromBody] SelectedPostDto selectedPost)
+    {
+        try
+        {
+            PostFullDto post = await postLogic.GetAsync(selectedPost);
+            return Ok(post);
+        }
+        catch (Exception e)
+        {
+            return BadRequest(e.Message);
         }
     }
 
@@ -53,24 +67,20 @@ public class PostsController: ControllerBase
             return StatusCode(500, e.Message);
         }
     }
-    [HttpGet]
-    public async Task<ActionResult<IEnumerable<Post>>> GetAllPosts()
+    
+    [HttpGet, Route("Posts")]
+    public async Task<ActionResult> GetAllPosts()
     {
         try
         {
-            var posts = await postLogic.GetAllPosts();
-            if (!posts.Any())
-            {
-                return NotFound("No posts found.");
-            }
-            return Ok(posts);
+            return Ok(await postLogic.GetAllAsync());
         }
         catch (Exception e)
         {
-            Console.WriteLine(e);
-            return StatusCode(500, e.Message);
+            return BadRequest(e.Message);
         }
     }
+    
     
     [HttpGet("id")]
     public async Task<ActionResult<Post>> GetPostById([FromQuery] int id)
@@ -90,4 +100,6 @@ public class PostsController: ControllerBase
             return StatusCode(500, e.Message);
         }
     }
+    
+
 }

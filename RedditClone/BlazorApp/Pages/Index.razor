@@ -1,15 +1,66 @@
 ﻿@page "/"
+@using Domain.DTOs
+@using HttpClients.ClientInterfaces
+@inject NavigationManager navmgr
+@inject IPostService PostService
+
 
 <PageTitle>Index</PageTitle>
 
-<h1>Hello, world!</h1>
+<h1> fake Reddit homepage</h1>
 
-Welcome to your new app.
 
 <AuthorizeView>
     <Authorized>
         <p>You are now logged in as @context.User.Identity.Name</p>
+        <MudButton Variant="Variant.Filled" Color="Color.Primary" OnClick="@CreatePostPage">Create</MudButton>
+        
+        
     </Authorized>
 </AuthorizeView>
 
-<SurveyPrompt Title="How is Blazor working for you?"/>
+@if (RedditPosts == null)
+{
+    <p>
+        <em>Loading....or no posts, sad times</em>
+    </p>
+}
+else
+{
+    @foreach(var post in RedditPosts)
+    {
+        <MudPaper Class="posts">
+            <MudList Clickable="true">
+                <MudListItem Avatar="@Icons.Material.Filled.Chat"Text="@post.PostTitle" OnClick="@(() => OnPostClick(post.index))"></MudListItem>
+            </MudList>
+        </MudPaper>
+        
+    }
+}
+@code {
+    private ICollection<PostBasicDto> RedditPosts;
+    
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            RedditPosts = await PostService.GetAllAsync();
+        }
+        catch (Exception e)
+        {
+            RedditPosts = null;
+            throw new Exception("Big sad");
+        }
+    }
+
+    private void OnPostClick(int id)
+    {
+        navmgr.NavigateTo($"/SelectedPost/{id}");
+    }
+
+    private void CreatePostPage()
+    {
+        navmgr.NavigateTo("/CreatePost");
+    }
+    
+}

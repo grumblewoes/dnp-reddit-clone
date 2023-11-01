@@ -7,11 +7,5 @@ public class Post
     public string Title { get; set; }
     public string Body { get; set; }
 
-    public Post(string author, string title, string body)
-    {
-        //post ID gets generated in DAO file
-        Author = author;
-        Title = title;
-        Body = body;
-    }
+    
 }

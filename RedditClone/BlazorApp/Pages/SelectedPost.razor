@@ -1,0 +1,42 @@
+@page "/SelectedPost"
+@page "/SelectedPost/{id}"
+@using HttpClients.ClientInterfaces
+@using Domain.Models
+@using Domain.DTOs
+
+@inject NavigationManager navMgr
+@inject IPostService postService
+<h3>SelectedPost</h3>
+
+@if (Post == null)
+{
+    <p>
+        <em>Loading....or nothing to load</em>
+    </p>
+}
+else
+{
+    <MudPaper>
+        <MudText Typo="Typo.h2" T="string">@Post.PostTitle</MudText>
+        <MudText Style="" Typo="Typo.h3" T="string">@Post.PostCreator</MudText>
+        <MudText Typo="Typo.body1" T="string">@Post.PostContext</MudText>
+    </MudPaper>
+}
+@code {
+    [Parameter] 
+    public string id { get; set; }
+
+    private PostFullDto? Post;
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            Post = await postService.GetAsync(Int16.Parse(id));
+        }
+        catch (Exception e)
+        {
+            throw new Exception("unlucky");
+        }
+    }
+}

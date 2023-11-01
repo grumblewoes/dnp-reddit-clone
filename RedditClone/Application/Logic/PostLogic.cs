@@ -8,31 +8,61 @@ namespace Application.Logic;
 public class PostLogic : IPostLogic
 {
     private readonly IPostDAO postDAO;
-    private readonly IUserDAO userDAO;
 
-    public PostLogic(IPostDAO postDAO, IUserDAO userDAO)
+    public PostLogic(IPostDAO postDAO)
     {
         this.postDAO = postDAO;
-        this.userDAO = userDAO;
     }
     
     public async Task<Post> CreateAsync(PostCreationDTO postToCreate)
     {
-        User? user = await userDAO.GetByUsernameAsync(postToCreate.Author);
-        if (user == null)
+        Post post = new Post()
         {
-            throw new Exception($"User with the name {postToCreate.Author} was not found.");
-        }
-        
-        Post toCreate = new Post(postToCreate.Author, postToCreate.Title, postToCreate.Body);
-        Post created = await postDAO.CreateAsync(toCreate);
-        return created;
+            Title= postToCreate.Title,
+            Body = postToCreate.Body,
+            Author= postToCreate.NickName,
+        };
+
+        Post createdPost = await postDAO.CreateAsync(post);
+
+        return createdPost;
     }
     // gets posts based on search
     public Task<IEnumerable<Post>> GetBySearchAsync(SearchPostParametersDTO searchPostParameters)
     {
         return postDAO.GetBySearchAsync(searchPostParameters);
     }
+
+    public async Task<IEnumerable<PostBasicDto>> GetAllAsync()
+    {
+        IEnumerable<Post>? posts = await postDAO.GetAllAsync();
+
+
+        List<PostBasicDto>? postFullDtos = new List<PostBasicDto>();
+        foreach (var post in posts)
+        {
+            postFullDtos.Add(new PostBasicDto
+            {
+                PostTitle = post.Title,
+                index = post.Id
+            });
+        }
+        return postFullDtos;
+    }
+
+    public async Task<PostFullDto> GetAsync(SelectedPostDto postDto)
+    {
+        Post? redditpost = await postDAO.GetByIdAsync(postDto.id);
+
+        return new PostFullDto()
+        {
+            PostTitle = redditpost.Title,
+            PostContext = redditpost.Body,
+            PostCreator = redditpost.Author,
+            index = redditpost.Id
+        };
+    }
+
     //gets all posts
     public async Task<IEnumerable<Post>> GetAllPosts()
     {

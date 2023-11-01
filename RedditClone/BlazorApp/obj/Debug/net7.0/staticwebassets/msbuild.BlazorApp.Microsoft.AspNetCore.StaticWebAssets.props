@@ -345,7 +345,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>C:\Users\Anna\Documents\VIA\Semester 3\DNP\dnp-reddit-clone\RedditClone\BlazorApp\bin\Debug\net7.0\wwwroot\_framework\blazor.webassembly.js</RelatedAsset>
+      <RelatedAsset>C:\Users\sliwa\workspacemain\intelij\dnp-reddit-clone1\RedditClone\BlazorApp\bin\Debug\net7.0\wwwroot\_framework\blazor.webassembly.js</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>gzip</AssetTraitValue>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

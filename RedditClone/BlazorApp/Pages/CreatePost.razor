@@ -1,0 +1,104 @@
+@page "/CreatePost"
+@using BlazorApp.Services
+@using HttpClients.ClientInterfaces
+@inject IPostService postService
+@inject NavigationManager navMgr
+@inject IAuthService authenticationService
+@using System.Security.Claims
+@using HttpClients.Implementations
+@using Microsoft.AspNetCore.Components.Authorization
+
+<AuthorizeView>
+    <Authorized>
+        <MudGrid>
+            <MudItem xs="12" sm="7">
+                <MudPaper Class="pa-4">
+                    <MudForm ref="form" @bind-isValid="isSucced">
+                        <MudText id="nickname" Typo="Typo.h3">@author</MudText>
+                        <MudTextField T="string" Required="true" Label="Title" RequiredError="User name is required" @bind-Value="postTitle"></MudTextField>
+                        <MudTextField id="bigText" T="string" Required="true" Label="Whats on your mind?.." RequiredError="text is required"
+                                      Variant="Variant.Outlined" Lines="4" Counter="450" MaxLength="450" Immediate="true"
+                                      @bind-value="postBody"></MudTextField>
+                        <MudButton id="create" Variant="Variant.Filled" Color="Color.Primary" Disabled="@(!isSucced)"
+                                   Class="ml-auto" @onclick="Create">Create</MudButton>
+                    </MudForm>
+                </MudPaper>
+            </MudItem>
+        </MudGrid>
+    </Authorized>
+    <NotAuthorized>
+        <h3>YOU MUST BE LOGGED IN</h3>
+        <MudAlert Type="AlertSeverity.Error">You must be logged in to create a post. Please log in or register.</MudAlert>
+                <MudButton Variant="Variant.Filled" Color="Color.Primary" @onclick="RedirectToLogin">Log In</MudButton>
+    </NotAuthorized>
+</AuthorizeView>
+
+@code {
+    private string postTitle = "";
+    private string postBody = "";
+    private string msg = "";
+    private string? author = "";
+    private bool isSucced;
+
+    [CascadingParameter]
+    public Task<AuthenticationState> AuthState { get; set; } = null!;
+
+    private IEnumerable<Claim>? userClaims;
+
+    protected override async Task OnInitializedAsync()
+    {
+        AuthenticationState authState = await AuthState;
+        ClaimsPrincipal user = authState.User;
+
+        userClaims = user.Claims;
+    
+        var givenNameClaim = user.Claims.FirstOrDefault(claim => claim.Type.Equals(ClaimTypes.GivenName));
+    
+        if (givenNameClaim != null)
+        {
+            author = givenNameClaim.Value;
+        }
+        else
+        {
+    // Handle the case where the claim is not found.
+            Console.WriteLine("claim not found");
+    // You can set a default value or take appropriate action.
+        }
+    }
+
+
+
+    private async Task Create()
+    {
+        msg = "";
+
+
+        if (string.IsNullOrEmpty(postTitle))
+        {
+            msg = "Title cannot be empty!";
+            return;
+        }
+        if (string.IsNullOrEmpty(postBody))
+        {
+            msg = "Body cannot be empty!";
+            return;
+        }
+        try
+        {
+            await postService.CreateAsync(postTitle, postBody, author);
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            msg = e.Message;
+        }
+    }
+    
+    private async Task RedirectToLogin()
+    {
+    // Redirect to the login page
+        navMgr.NavigateTo("/Login");
+    }
+
+}
+
