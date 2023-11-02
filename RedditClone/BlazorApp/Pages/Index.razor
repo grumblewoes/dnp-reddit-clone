@@ -1,15 +1,86 @@
 ﻿@page "/"
+@using Domain.DTOs
+@using HttpClients.ClientInterfaces
+@inject NavigationManager navmgr
+@inject IPostService PostService
 
+<div class="page-container">
 <PageTitle>Index</PageTitle>
 
-<h1>Hello, world!</h1>
+<h1 style="color: white"> Fake Reddit Tihi</h1>
 
-Welcome to your new app.
 
 <AuthorizeView>
     <Authorized>
-        <p>You are now logged in as @context.User.Identity.Name</p>
+<MudButton Variant="Variant.Filled" Color="Color.Primary" OnClick="@CreatePostPage">Create Great Post</MudButton>
+        <MudCard>
+            <MudCardContent>
+                 <MudCard Typo="Typo.h3" >You are now logged in as , @context.User.Identity.Name</MudCard> 
+            </MudCardContent>
+        </MudCard>
+        
     </Authorized>
 </AuthorizeView>
+<br/>
 
-<SurveyPrompt Title="How is Blazor working for you?"/>
+@if (RedditPosts == null)
+{
+    <p>
+        <em>Loading....or no posts, sad times</em>
+    </p>
+}
+else
+{
+    @foreach(var post in RedditPosts)
+    {
+        <MudPaper Class="posts">
+            <MudList Clickable="true">
+                <MudListItem Avatar="@Icons.Material.Filled.Chat"Text="@post.PostTitle" OnClick="@(() => OnPostClick(post.index))"></MudListItem>
+            </MudList>
+        </MudPaper>
+        
+    }
+}
+</div>
+@code {
+    private ICollection<PostBasicDto> RedditPosts;
+    private string errorMessage;
+    
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            RedditPosts = await PostService.GetAllAsync();
+        }
+        catch (Exception e)
+        {
+            RedditPosts = null;
+            errorMessage = e.Message;
+            throw new Exception(e.Message);
+        }
+    }
+
+    private void OnPostClick(int id)
+    {
+        navmgr.NavigateTo($"/SelectedPost/{id}");
+    }
+
+    private void CreatePostPage()
+    {
+        navmgr.NavigateTo("/CreatePost");
+    }
+    
+}
+<style>
+ .page-container {
+        background-image: url(img/cartman.jpg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+    }
+    .posts {
+    margin-bottom: 1%;
+    max-width: 300px;
+    }   
+    
+</style>

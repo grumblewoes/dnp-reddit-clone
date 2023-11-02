@@ -1,0 +1,14 @@
+// log in as Asia
+POST https://localhost:7252/auth/login
+Content-Type: application/json
+
+{ "Username" : "Asia", "Password" : "a" }
+
+###
+
+GET http://localhost:7252/test/authorized
+Authorization: Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJKV1RTZXJ2aWNlQWNjZXNzVG9rZW4iLCJqdGkiOiJlNDhmZGM0My1hYzA1LTQ4NzktODE3NS0xMzM2NjA3M2NjNjQiLCJpYXQiOiIxMS8xLzIwMjMgNTo0NjoxMiBQTSIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJBc2lhIiwiZXhwIjoxNjk4ODY0MzcyLCJpc3MiOiJKV1RBdXRoZW50aWNhdGlvblNlcnZlciIsImF1ZCI6IkpXVFNlcnZpY2VCbGF6b3JXYXNtQ2xpZW50In0.R7Vh8ccIvOM7xp47oMYPmVLCgWBgQo4sU5sh9RVj409SJz5eZ46Q2qjv68bplOxQek1STSCdZlpULkc2h5rZPA
+
+###
+
+GET http://localhost:7252/test/allowanon

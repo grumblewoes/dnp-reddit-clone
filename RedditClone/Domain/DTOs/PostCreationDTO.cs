@@ -2,15 +2,9 @@ namespace Domain.DTOs;
 
 public class PostCreationDTO
 {
-    public string Title { get; }
-    public string Author { get; }
-    public string Body { get; }
-
-    public PostCreationDTO(string title, string author, string body)
-    {
-        Author = author;
-        Title = title;
-        Body = body;
-    }
+    public string Title { get; set; }
+    public string NickName { get; set; }
+    public string Body { get; set; }
+    
     
 }

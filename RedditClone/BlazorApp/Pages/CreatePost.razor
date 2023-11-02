@@ -1,0 +1,138 @@
+@page "/CreatePost"
+@using BlazorApp.Services
+@using HttpClients.ClientInterfaces
+@inject IPostService postService
+@inject NavigationManager navMgr
+@inject IAuthService authenticationService
+@using System.Security.Claims
+@using HttpClients.Implementations
+@using Microsoft.AspNetCore.Components.Authorization
+
+<AuthorizeView>
+    <Authorized>
+        <MudGrid>
+            <MudItem xs="12" sm="7">
+                <MudPaper Class="pa-4">
+                    <MudForm ref="form" @bind-isValid="isSucced">
+                        <MudText id="nickname" Typo="Typo.h3">@author</MudText>
+                        <MudTextField T="string" Required="true" Label="Title" RequiredError="User name is required" @bind-Value="postTitle"></MudTextField>
+                        <MudTextField id="bigText" T="string" Required="true" Label="Whats on your mind?.." RequiredError="text is required"
+                                      Variant="Variant.Outlined" Lines="4" Counter="450" MaxLength="450" Immediate="true"
+                                      @bind-Value="postBody"></MudTextField>
+                        <MudButton id="create" Variant="Variant.Filled" Color="Color.Primary" Disabled="@(!isSucced)"
+                                   Class="ml-auto" @onclick="Create">Create</MudButton>
+                    </MudForm>
+                </MudPaper>
+            </MudItem>
+        </MudGrid>
+    </Authorized>
+    <NotAuthorized>
+        <h3>YOU MUST BE LOGGED IN</h3>
+        <MudAlert Type="AlertSeverity.Error">You must be logged in to create a post. Please log in or register.</MudAlert>
+        <MudButton Variant="Variant.Filled" Color="Color.Primary" @onclick="RedirectToLogin">Log In</MudButton>
+    </NotAuthorized>
+</AuthorizeView>
+
+@code {
+    private string postTitle;
+    private string postBody;
+    private string msg;
+    private string? author;
+    private bool isSucced;
+
+    [CascadingParameter]
+    public Task<AuthenticationState> AuthState { get; set; } = null!;
+
+    private IEnumerable<Claim>? userClaims;
+
+    protected override async Task OnInitializedAsync()
+    {
+        AuthenticationState authState = await AuthState;
+
+        if (authState != null)
+        {
+            ClaimsPrincipal user = authState.User;
+
+            if (user != null)
+            {
+                if (user.Identity.IsAuthenticated)
+                {
+                    var givenNameClaim = user.Claims.FirstOrDefault(claim => claim.Type.Equals(ClaimTypes.Name));
+
+                    if (givenNameClaim != null)
+                    {
+                        author = givenNameClaim.Value;
+                    }
+                    else
+                    {
+    // Handle the case where the claim is not found.
+                        Console.WriteLine("Claim not found");
+    // You can set a default value or take appropriate action.
+                    }
+                }
+                else
+                {
+    // Handle the case where the user is not authenticated.
+    // For example, you can redirect to the login page.
+                    RedirectToLogin();
+                }
+            }
+            else
+            {
+    // Handle the case where the user is null.
+    // For example, you can redirect to the login page.
+                RedirectToLogin();
+            }
+        }
+        else
+        {
+    // Handle the case where authState is null.
+    // For example, you can redirect to the login page.
+            RedirectToLogin();
+        }
+    }
+
+     private async Task Create()
+        {
+            try
+            {
+                await postService.CreateAsync(postTitle, postBody,author);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
+         navMgr.NavigateTo("/");
+        }
+    
+    private async Task RedirectToLogin()
+    {
+    // Redirect to the login page
+        navMgr.NavigateTo("/Login");
+    }
+    
+}
+<style>
+    #create{
+    margin-top: 5%;
+    }
+    #nickname{
+    margin-bottom: 5%;
+    background-color: #f8ca91;
+    border-radius: 5px;
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+           
+    }
+   
+     .
+        
+        
+    
+</style>
+

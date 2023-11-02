@@ -1,0 +1,15 @@
+C:\Users\sliwa\workspacemain\intelij\dnp-reddit-clone1\RedditClone\HttpClients\bin\Debug\net7.0\HttpClients.deps.json
+C:\Users\sliwa\workspacemain\intelij\dnp-reddit-clone1\RedditClone\HttpClients\bin\Debug\net7.0\HttpClients.dll
+C:\Users\sliwa\workspacemain\intelij\dnp-reddit-clone1\RedditClone\HttpClients\bin\Debug\net7.0\HttpClients.pdb
+C:\Users\sliwa\workspacemain\intelij\dnp-reddit-clone1\RedditClone\HttpClients\bin\Debug\net7.0\Domain.dll
+C:\Users\sliwa\workspacemain\intelij\dnp-reddit-clone1\RedditClone\HttpClients\bin\Debug\net7.0\Domain.pdb
+C:\Users\sliwa\workspacemain\intelij\dnp-reddit-clone1\RedditClone\HttpClients\obj\Debug\net7.0\HttpClients.csproj.AssemblyReference.cache
+C:\Users\sliwa\workspacemain\intelij\dnp-reddit-clone1\RedditClone\HttpClients\obj\Debug\net7.0\HttpClients.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sliwa\workspacemain\intelij\dnp-reddit-clone1\RedditClone\HttpClients\obj\Debug\net7.0\HttpClients.AssemblyInfoInputs.cache
+C:\Users\sliwa\workspacemain\intelij\dnp-reddit-clone1\RedditClone\HttpClients\obj\Debug\net7.0\HttpClients.AssemblyInfo.cs
+C:\Users\sliwa\workspacemain\intelij\dnp-reddit-clone1\RedditClone\HttpClients\obj\Debug\net7.0\HttpClients.csproj.CoreCompileInputs.cache
+C:\Users\sliwa\workspacemain\intelij\dnp-reddit-clone1\RedditClone\HttpClients\obj\Debug\net7.0\HttpClients.csproj.CopyComplete
+C:\Users\sliwa\workspacemain\intelij\dnp-reddit-clone1\RedditClone\HttpClients\obj\Debug\net7.0\HttpClients.dll
+C:\Users\sliwa\workspacemain\intelij\dnp-reddit-clone1\RedditClone\HttpClients\obj\Debug\net7.0\refint\HttpClients.dll
+C:\Users\sliwa\workspacemain\intelij\dnp-reddit-clone1\RedditClone\HttpClients\obj\Debug\net7.0\HttpClients.pdb
+C:\Users\sliwa\workspacemain\intelij\dnp-reddit-clone1\RedditClone\HttpClients\obj\Debug\net7.0\ref\HttpClients.dll

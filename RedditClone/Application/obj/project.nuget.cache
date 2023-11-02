@@ -1,8 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "03yY0w0+zfyU0sssrE/jbndBNLgfQvudFMUDzbnx3g7ZaFCQ36pFoJl45268NDjDAM/qu4rT2rCWA+tHma4Ycg==",
+  "dgSpecHash": "du+boslRiJyG1QMB1NWjkydeZGoFLAnYdWPSfC3MzXuHzRtNvL1gUpU89C/p9tejufWCdjVOOA5tWKKl/+RHBA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Anna\\Documents\\VIA\\Semester 3\\DNP\\dnp-reddit-clone\\RedditClone\\Application\\Application.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\sliwa\\workspacemain\\intelij\\dnp-reddit-clone1\\RedditClone\\Application\\Application.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\sliwa\\.nuget\\packages\\microsoft.aspnetcore.authorization\\7.0.13\\microsoft.aspnetcore.authorization.7.0.13.nupkg.sha512",
+    "C:\\Users\\sliwa\\.nuget\\packages\\microsoft.aspnetcore.metadata\\7.0.13\\microsoft.aspnetcore.metadata.7.0.13.nupkg.sha512",
+    "C:\\Users\\sliwa\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512",
+    "C:\\Users\\sliwa\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.1\\microsoft.extensions.logging.abstractions.7.0.1.nupkg.sha512",
+    "C:\\Users\\sliwa\\.nuget\\packages\\microsoft.extensions.options\\7.0.1\\microsoft.extensions.options.7.0.1.nupkg.sha512",
+    "C:\\Users\\sliwa\\.nuget\\packages\\microsoft.extensions.primitives\\7.0.0\\microsoft.extensions.primitives.7.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

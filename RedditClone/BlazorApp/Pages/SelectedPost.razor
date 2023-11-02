@@ -1,0 +1,66 @@
+@page "/SelectedPost"
+@page "/SelectedPost/{id}"
+@using HttpClients.ClientInterfaces
+@using Domain.Models
+@using Domain.DTOs
+
+@inject NavigationManager navMgr
+@inject IPostService postService
+<h3>SelectedPost</h3>
+
+@if (Post == null)
+{
+    <p>
+        <em>Loading....or nothing to load</em>
+    </p>
+}
+else
+{
+    <MudPaper Class="post-container">
+        <MudText Typo="Typo.h2" T="string">Title: @Post.PostTitle</MudText>
+        <MudText Style="" Typo="Typo.h3" T="string">Creator: @Post.PostCreator</MudText>
+        <MudText Typo="Typo.body1" T="string">Content: @Post.PostContext</MudText>
+    </MudPaper>
+}
+@code {
+    [Parameter] 
+    public string id { get; set; }
+
+    private PostFullDto? Post;
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            Post = await postService.GetAsync(Int16.Parse(id));
+        }
+        catch (Exception e)
+        {
+            throw new Exception("unlucky");
+        }
+    }
+}
+<style>
+    .post-container {
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        max-width: 600px;
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+
+    .post-details {
+        margin-bottom: 20px;
+    }
+
+    h4 {
+        font-weight: bold;
+    }
+
+    p {
+        margin: 0;
+    }
+</style>
