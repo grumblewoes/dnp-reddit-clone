@@ -1717,3 +1717,11 @@ C:\Users\Anna\Documents\Code\Github Repos\dnp-reddit-clone\RedditClone\BlazorApp
 C:\Users\Anna\Documents\Code\Github Repos\dnp-reddit-clone\RedditClone\BlazorApp\obj\Debug\net7.0\refint\BlazorApp.dll
 C:\Users\Anna\Documents\Code\Github Repos\dnp-reddit-clone\RedditClone\BlazorApp\obj\Debug\net7.0\BlazorApp.pdb
 C:\Users\Anna\Documents\Code\Github Repos\dnp-reddit-clone\RedditClone\BlazorApp\obj\Debug\net7.0\ref\BlazorApp.dll
+C:\Users\Anna\Documents\Code\Github Repos\dnp-reddit-clone\RedditClone\BlazorApp\bin\Debug\net7.0\wwwroot\_framework\HttpClients.dll
+C:\Users\Anna\Documents\Code\Github Repos\dnp-reddit-clone\RedditClone\BlazorApp\bin\Debug\net7.0\wwwroot\_framework\HttpClients.pdb
+C:\Users\Anna\Documents\Code\Github Repos\dnp-reddit-clone\RedditClone\BlazorApp\bin\Debug\net7.0\wwwroot\_framework\HttpClients.dll.gz
+C:\Users\Anna\Documents\Code\Github Repos\dnp-reddit-clone\RedditClone\BlazorApp\bin\Debug\net7.0\wwwroot\_framework\HttpClients.pdb.gz
+C:\Users\Anna\Documents\Code\Github Repos\dnp-reddit-clone\RedditClone\BlazorApp\bin\Debug\net7.0\HttpClients.dll
+C:\Users\Anna\Documents\Code\Github Repos\dnp-reddit-clone\RedditClone\BlazorApp\bin\Debug\net7.0\HttpClients.pdb
+C:\Users\Anna\Documents\Code\Github Repos\dnp-reddit-clone\RedditClone\BlazorApp\obj\Debug\net7.0\build-gz\gWIZ9yHt.gz
+C:\Users\Anna\Documents\Code\Github Repos\dnp-reddit-clone\RedditClone\BlazorApp\obj\Debug\net7.0\build-gz\wQZ+XToD.gz

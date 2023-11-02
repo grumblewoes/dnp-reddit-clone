@@ -1,29 +1,53 @@
 ﻿@page "/"
+@using HttpClients.ClientInterfaces
+@attribute [AllowAnonymous]
+@inject AuthenticationStateProvider AuthenticationStateProvider
+@inject IPostService postService;
+
 <PageTitle>Dashboard</PageTitle>
 <h1>Dashboard</h1>
-
-@if (posts == null)
-{
-    <p>
-        <em>Loading...</em>
-    </p>
-}
-else
-{
-    @foreach (var post in posts)
-    {
-        <Post Id="@post.Id" Title="@post.Title" Author="@post.Author" Body="@post.Body"/>
-    }
-}
+<AuthorizeView>
+    <NotAuthorized>
+        @if (posts == null)
+        {
+            <p>
+                <em>Loading...</em>
+            </p>
+        }
+        else
+        {
+            @foreach (var post in posts)
+            {
+                <Post Id="@post.Id" Title="@post.Title" Author="@post.Author" Body="@post.Body"/>
+            }
+        }
+    </NotAuthorized>
+</AuthorizeView>
 
 @code {
-    private Post[]? posts;
-    [Inject]
-    private HttpClient client { get; set; }
+    private IEnumerable<Domain.Models.Post>? posts;
+    private string msg = "";
+    
     
     protected override async Task OnInitializedAsync()
     {
-        posts = await client.GetFromJsonAsync<Post[]>("http://localhost:5291/posts");
+        var authState = await AuthenticationStateProvider.GetAuthenticationStateAsync();
+        await LoadPosts(null);
+    }
+    
+    private async Task LoadPosts(string? name)
+    {
+        try
+        {
+
+            posts = await postService.GetAsync(null, null, null, null);
+            Console.WriteLine(posts.ToString());
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            msg = e.Message;
+        }
     }
     
 }

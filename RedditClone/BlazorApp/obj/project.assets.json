@@ -541,11 +541,29 @@
       "Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Microsoft.AspNetCore.Authorization": "7.0.13",
+          "Microsoft.Extensions.DependencyInjection": "7.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "7.0.0"
+        },
         "compile": {
           "bin/placeholder/Domain.dll": {}
         },
         "runtime": {
           "bin/placeholder/Domain.dll": {}
+        }
+      },
+      "HttpClients/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/HttpClients.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/HttpClients.dll": {}
         }
       },
       "Shared/1.0.0": {
@@ -1096,11 +1114,29 @@
       "Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Microsoft.AspNetCore.Authorization": "7.0.13",
+          "Microsoft.Extensions.DependencyInjection": "7.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "7.0.0"
+        },
         "compile": {
           "bin/placeholder/Domain.dll": {}
         },
         "runtime": {
           "bin/placeholder/Domain.dll": {}
+        }
+      },
+      "HttpClients/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/HttpClients.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/HttpClients.dll": {}
         }
       },
       "Shared/1.0.0": {
@@ -2023,6 +2059,11 @@
       "path": "../Domain/Domain.csproj",
       "msbuildProject": "../Domain/Domain.csproj"
     },
+    "HttpClients/1.0.0": {
+      "type": "project",
+      "path": "../HttpClients/HttpClients.csproj",
+      "msbuildProject": "../HttpClients/HttpClients.csproj"
+    },
     "Shared/1.0.0": {
       "type": "project",
       "path": "../Shared/Shared.csproj",
@@ -2032,6 +2073,7 @@
   "projectFileDependencyGroups": {
     "net7.0": [
       "Domain >= 1.0.0",
+      "HttpClients >= 1.0.0",
       "Microsoft.AspNetCore.Components.Authorization >= 7.0.13",
       "Microsoft.AspNetCore.Components.WebAssembly >= 7.0.7",
       "Microsoft.AspNetCore.Components.WebAssembly.DevServer >= 7.0.7",
@@ -2066,6 +2108,9 @@
           "projectReferences": {
             "C:\\Users\\Anna\\Documents\\Code\\Github Repos\\dnp-reddit-clone\\RedditClone\\Domain\\Domain.csproj": {
               "projectPath": "C:\\Users\\Anna\\Documents\\Code\\Github Repos\\dnp-reddit-clone\\RedditClone\\Domain\\Domain.csproj"
+            },
+            "C:\\Users\\Anna\\Documents\\Code\\Github Repos\\dnp-reddit-clone\\RedditClone\\HttpClients\\HttpClients.csproj": {
+              "projectPath": "C:\\Users\\Anna\\Documents\\Code\\Github Repos\\dnp-reddit-clone\\RedditClone\\HttpClients\\HttpClients.csproj"
             },
             "C:\\Users\\Anna\\Documents\\Code\\Github Repos\\dnp-reddit-clone\\RedditClone\\Shared\\Shared.csproj": {
               "projectPath": "C:\\Users\\Anna\\Documents\\Code\\Github Repos\\dnp-reddit-clone\\RedditClone\\Shared\\Shared.csproj"

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "1V3hS3Ga36gqB1MbXyW04E98ORmZoYjeJBe/Xsh7HhE=",
+  "Hash": "hbXVehD8mKygHaVzJsfokMUGgx8R3XynznZx+8sKWjE=",
   "Source": "BlazorApp",
   "BasePath": "/",
   "Mode": "Root",
@@ -202,6 +202,40 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\Anna\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\7.0.10\\runtimes\\browser-wasm\\native\\dotnet.wasm"
+    },
+    {
+      "Identity": "C:\\Users\\Anna\\Documents\\Code\\Github Repos\\dnp-reddit-clone\\RedditClone\\BlazorApp\\bin\\Debug\\net7.0\\wwwroot\\_framework\\HttpClients.dll",
+      "SourceId": "BlazorApp",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\Anna\\Documents\\Code\\Github Repos\\dnp-reddit-clone\\RedditClone\\BlazorApp\\bin\\Debug\\net7.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/HttpClients.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\Anna\\Documents\\Code\\Github Repos\\dnp-reddit-clone\\RedditClone\\HttpClients\\bin\\Debug\\net7.0\\HttpClients.dll"
+    },
+    {
+      "Identity": "C:\\Users\\Anna\\Documents\\Code\\Github Repos\\dnp-reddit-clone\\RedditClone\\BlazorApp\\bin\\Debug\\net7.0\\wwwroot\\_framework\\HttpClients.pdb",
+      "SourceId": "BlazorApp",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\Anna\\Documents\\Code\\Github Repos\\dnp-reddit-clone\\RedditClone\\BlazorApp\\bin\\Debug\\net7.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/HttpClients.pdb",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "symbol",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\Anna\\Documents\\Code\\Github Repos\\dnp-reddit-clone\\RedditClone\\HttpClients\\bin\\Debug\\net7.0\\HttpClients.pdb"
     },
     {
       "Identity": "C:\\Users\\Anna\\Documents\\Code\\Github Repos\\dnp-reddit-clone\\RedditClone\\BlazorApp\\bin\\Debug\\net7.0\\wwwroot\\_framework\\icudt_CJK.dat",
@@ -4981,6 +5015,23 @@
       "OriginalItemSpec": "C:\\Users\\Anna\\Documents\\Code\\Github Repos\\dnp-reddit-clone\\RedditClone\\BlazorApp\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Runtime.Serialization.Xml.dll"
     },
     {
+      "Identity": "C:\\Users\\Anna\\Documents\\Code\\Github Repos\\dnp-reddit-clone\\RedditClone\\BlazorApp\\obj\\Debug\\net7.0\\build-gz\\gWIZ9yHt.gz",
+      "SourceId": "BlazorApp",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\Anna\\Documents\\Code\\Github Repos\\dnp-reddit-clone\\RedditClone\\BlazorApp\\bin\\Debug\\net7.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/HttpClients.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "C:\\Users\\Anna\\Documents\\Code\\Github Repos\\dnp-reddit-clone\\RedditClone\\BlazorApp\\bin\\Debug\\net7.0\\wwwroot\\_framework\\HttpClients.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\Anna\\Documents\\Code\\Github Repos\\dnp-reddit-clone\\RedditClone\\BlazorApp\\bin\\Debug\\net7.0\\wwwroot\\_framework\\HttpClients.dll"
+    },
+    {
       "Identity": "C:\\Users\\Anna\\Documents\\Code\\Github Repos\\dnp-reddit-clone\\RedditClone\\BlazorApp\\obj\\Debug\\net7.0\\build-gz\\HgwCEIu6.gz",
       "SourceId": "BlazorApp",
       "SourceType": "Computed",
@@ -6764,6 +6815,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\Anna\\Documents\\Code\\Github Repos\\dnp-reddit-clone\\RedditClone\\BlazorApp\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Resources.Reader.dll"
+    },
+    {
+      "Identity": "C:\\Users\\Anna\\Documents\\Code\\Github Repos\\dnp-reddit-clone\\RedditClone\\BlazorApp\\obj\\Debug\\net7.0\\build-gz\\wQZ+XToD.gz",
+      "SourceId": "BlazorApp",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\Anna\\Documents\\Code\\Github Repos\\dnp-reddit-clone\\RedditClone\\BlazorApp\\bin\\Debug\\net7.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/HttpClients.pdb.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "C:\\Users\\Anna\\Documents\\Code\\Github Repos\\dnp-reddit-clone\\RedditClone\\BlazorApp\\bin\\Debug\\net7.0\\wwwroot\\_framework\\HttpClients.pdb",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\Anna\\Documents\\Code\\Github Repos\\dnp-reddit-clone\\RedditClone\\BlazorApp\\bin\\Debug\\net7.0\\wwwroot\\_framework\\HttpClients.pdb"
     },
     {
       "Identity": "C:\\Users\\Anna\\Documents\\Code\\Github Repos\\dnp-reddit-clone\\RedditClone\\BlazorApp\\obj\\Debug\\net7.0\\build-gz\\x4B3cwvZ.gz",
