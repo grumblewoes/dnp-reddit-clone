@@ -48,10 +48,48 @@
     protected override async Task OnInitializedAsync()
     {
         AuthenticationState authState = await AuthState;
-        ClaimsPrincipal user = authState.User;
 
-        userClaims = user.Claims;
-        author = user.Claims.First(claim => claim.Type.Equals(ClaimTypes.Name)).Value.ToString();
+        if (authState != null)
+        {
+            ClaimsPrincipal user = authState.User;
+
+            if (user != null)
+            {
+                if (user.Identity.IsAuthenticated)
+                {
+                    var givenNameClaim = user.Claims.FirstOrDefault(claim => claim.Type.Equals(ClaimTypes.Name));
+
+                    if (givenNameClaim != null)
+                    {
+                        author = givenNameClaim.Value;
+                    }
+                    else
+                    {
+    // Handle the case where the claim is not found.
+                        Console.WriteLine("Claim not found");
+    // You can set a default value or take appropriate action.
+                    }
+                }
+                else
+                {
+    // Handle the case where the user is not authenticated.
+    // For example, you can redirect to the login page.
+                    RedirectToLogin();
+                }
+            }
+            else
+            {
+    // Handle the case where the user is null.
+    // For example, you can redirect to the login page.
+                RedirectToLogin();
+            }
+        }
+        else
+        {
+    // Handle the case where authState is null.
+    // For example, you can redirect to the login page.
+            RedirectToLogin();
+        }
     }
 
      private async Task Create()

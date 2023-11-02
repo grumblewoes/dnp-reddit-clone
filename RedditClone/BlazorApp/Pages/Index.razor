@@ -12,6 +12,7 @@
 
 <AuthorizeView>
     <Authorized>
+<MudButton Variant="Variant.Filled" Color="Color.Primary" OnClick="@CreatePostPage">Create Great Post</MudButton>
         <MudCard>
             <MudCardContent>
                 <MudTypography Typo="Typo.h3" >You are now logged in as , @context.User.Identity.Name</MudTypography>
@@ -20,7 +21,6 @@
         
     </Authorized>
 </AuthorizeView>
-<MudButton Variant="Variant.Filled" Color="Color.Primary" OnClick="@CreatePostPage">Create Great Post</MudButton>
 <br/>
 
 @if (RedditPosts == null)
