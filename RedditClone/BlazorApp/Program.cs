@@ -28,5 +28,4 @@ builder.Services.AddAuthorizationCore();
 // {
 //     builder.Configuration.Bind("AzureAd", options.ProviderOptions.Authentication);
 // });
-
 await builder.Build().RunAsync();

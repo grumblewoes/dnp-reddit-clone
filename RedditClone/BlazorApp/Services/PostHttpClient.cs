@@ -8,10 +8,10 @@ using HttpClients.ClientInterfaces;
 
 namespace HttpClients.Implementations;
 
-public class PostHttpClient:IPostService
+public class PostHttpClient : IPostService
 {
     private readonly HttpClient client;
-    
+
 
     public PostHttpClient(HttpClient client)
     {
@@ -38,8 +38,8 @@ public class PostHttpClient:IPostService
 
     public async Task CreateAsync(string title, string body, string nickname)
     {
-         client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", JwtAuthService.Jwt);
-        
+        client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", JwtAuthService.Jwt);
+
         // string postAsJson = JsonSerializer.Serialize(CreatePostDto(title, body, nickname));
         // StringContent content = new(postAsJson, Encoding.UTF8, "application/json");
         // HttpResponseMessage response = await client.PostAsync("/Posts/Create", content);
@@ -47,12 +47,12 @@ public class PostHttpClient:IPostService
         PostCreationDTO postToCreate = new PostCreationDTO()
         {
             Title = title, Body = body, NickName = nickname
-
         };
 
-        HttpResponseMessage response = await client.PostAsJsonAsync("https://localhost:7252/Posts/Create", postToCreate);
+        HttpResponseMessage response =
+            await client.PostAsJsonAsync("https://localhost:7252/Posts/Create", postToCreate);
         Console.WriteLine($"Response status code: {response.StatusCode}");
-        string responseContent = await response.Content.ReadAsStringAsync(); 
+        string responseContent = await response.Content.ReadAsStringAsync();
         Console.WriteLine($"Response content: {responseContent}");
         if (!response.IsSuccessStatusCode)
         {
@@ -64,7 +64,7 @@ public class PostHttpClient:IPostService
     {
         string postAsJson = JsonSerializer.Serialize(CreateSelectedPostDto(id));
         StringContent content = new(postAsJson, Encoding.UTF8, "application/json");
-        var response = await client.PostAsync("https://localhost:7252/Posts/Post",content);
+        var response = await client.PostAsync("https://localhost:7252/Posts/Post", content);
         string postValues = await response.Content.ReadAsStringAsync();
         if (!response.IsSuccessStatusCode)
         {
@@ -78,14 +78,14 @@ public class PostHttpClient:IPostService
 
         return post;
     }
-    
+
     private PostCreationDTO CreatePostDto(string title, string mainText, string nickName)
     {
         PostCreationDTO postToCreate = new PostCreationDTO
         {
             Title = title,
             Body = mainText,
-            NickName= nickName
+            NickName = nickName
         };
         return postToCreate;
     }
