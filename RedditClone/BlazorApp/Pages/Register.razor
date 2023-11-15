@@ -46,11 +46,7 @@
         errorLabel = "";
         try
         {
-            User user = new User
-            {
-                Username = userName,
-                Password = password
-            };
+            User user = new User(userName, password);
             await authService.RegisterAsync(user);
             navMgr.NavigateTo("/Login");
         }

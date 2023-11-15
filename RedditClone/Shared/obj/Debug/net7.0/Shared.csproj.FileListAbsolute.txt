@@ -22,3 +22,15 @@ C:\Users\sliwa\workspacemain\intelij\dnp-reddit-clone1\RedditClone\Shared\obj\De
 C:\Users\sliwa\workspacemain\intelij\dnp-reddit-clone1\RedditClone\Shared\obj\Debug\net7.0\refint\Shared.dll
 C:\Users\sliwa\workspacemain\intelij\dnp-reddit-clone1\RedditClone\Shared\obj\Debug\net7.0\Shared.pdb
 C:\Users\sliwa\workspacemain\intelij\dnp-reddit-clone1\RedditClone\Shared\obj\Debug\net7.0\ref\Shared.dll
+C:\Users\Anna\Documents\Code\Github Repos\dnp-reddit-clone\RedditClone\Shared\bin\Debug\net7.0\Shared.deps.json
+C:\Users\Anna\Documents\Code\Github Repos\dnp-reddit-clone\RedditClone\Shared\bin\Debug\net7.0\Shared.dll
+C:\Users\Anna\Documents\Code\Github Repos\dnp-reddit-clone\RedditClone\Shared\bin\Debug\net7.0\Shared.pdb
+C:\Users\Anna\Documents\Code\Github Repos\dnp-reddit-clone\RedditClone\Shared\obj\Debug\net7.0\Shared.csproj.AssemblyReference.cache
+C:\Users\Anna\Documents\Code\Github Repos\dnp-reddit-clone\RedditClone\Shared\obj\Debug\net7.0\Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Anna\Documents\Code\Github Repos\dnp-reddit-clone\RedditClone\Shared\obj\Debug\net7.0\Shared.AssemblyInfoInputs.cache
+C:\Users\Anna\Documents\Code\Github Repos\dnp-reddit-clone\RedditClone\Shared\obj\Debug\net7.0\Shared.AssemblyInfo.cs
+C:\Users\Anna\Documents\Code\Github Repos\dnp-reddit-clone\RedditClone\Shared\obj\Debug\net7.0\Shared.csproj.CoreCompileInputs.cache
+C:\Users\Anna\Documents\Code\Github Repos\dnp-reddit-clone\RedditClone\Shared\obj\Debug\net7.0\Shared.dll
+C:\Users\Anna\Documents\Code\Github Repos\dnp-reddit-clone\RedditClone\Shared\obj\Debug\net7.0\refint\Shared.dll
+C:\Users\Anna\Documents\Code\Github Repos\dnp-reddit-clone\RedditClone\Shared\obj\Debug\net7.0\Shared.pdb
+C:\Users\Anna\Documents\Code\Github Repos\dnp-reddit-clone\RedditClone\Shared\obj\Debug\net7.0\ref\Shared.dll

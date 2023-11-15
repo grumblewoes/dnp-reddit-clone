@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\sliwa\\workspacemain\\intelij\\dnp-reddit-clone1\\RedditClone\\WebAPI\\WebAPI.csproj": {}
+    "C:\\Users\\Anna\\Documents\\Code\\Github Repos\\dnp-reddit-clone\\RedditClone\\WebAPI\\WebAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\sliwa\\workspacemain\\intelij\\dnp-reddit-clone1\\RedditClone\\Application\\Application.csproj": {
+    "C:\\Users\\Anna\\Documents\\Code\\Github Repos\\dnp-reddit-clone\\RedditClone\\Application\\Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\sliwa\\workspacemain\\intelij\\dnp-reddit-clone1\\RedditClone\\Application\\Application.csproj",
+        "projectUniqueName": "C:\\Users\\Anna\\Documents\\Code\\Github Repos\\dnp-reddit-clone\\RedditClone\\Application\\Application.csproj",
         "projectName": "Application",
-        "projectPath": "C:\\Users\\sliwa\\workspacemain\\intelij\\dnp-reddit-clone1\\RedditClone\\Application\\Application.csproj",
-        "packagesPath": "C:\\Users\\sliwa\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\sliwa\\workspacemain\\intelij\\dnp-reddit-clone1\\RedditClone\\Application\\obj\\",
+        "projectPath": "C:\\Users\\Anna\\Documents\\Code\\Github Repos\\dnp-reddit-clone\\RedditClone\\Application\\Application.csproj",
+        "packagesPath": "C:\\Users\\Anna\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Anna\\Documents\\Code\\Github Repos\\dnp-reddit-clone\\RedditClone\\Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\sliwa\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Anna\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
@@ -26,11 +26,11 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\sliwa\\workspacemain\\intelij\\dnp-reddit-clone1\\RedditClone\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\sliwa\\workspacemain\\intelij\\dnp-reddit-clone1\\RedditClone\\Domain\\Domain.csproj"
+              "C:\\Users\\Anna\\Documents\\Code\\Github Repos\\dnp-reddit-clone\\RedditClone\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\Anna\\Documents\\Code\\Github Repos\\dnp-reddit-clone\\RedditClone\\Domain\\Domain.csproj"
               },
-              "C:\\Users\\sliwa\\workspacemain\\intelij\\dnp-reddit-clone1\\RedditClone\\Shared\\Shared.csproj": {
-                "projectPath": "C:\\Users\\sliwa\\workspacemain\\intelij\\dnp-reddit-clone1\\RedditClone\\Shared\\Shared.csproj"
+              "C:\\Users\\Anna\\Documents\\Code\\Github Repos\\dnp-reddit-clone\\RedditClone\\Shared\\Shared.csproj": {
+                "projectPath": "C:\\Users\\Anna\\Documents\\Code\\Github Repos\\dnp-reddit-clone\\RedditClone\\Shared\\Shared.csproj"
               }
             }
           }
@@ -64,17 +64,17 @@
         }
       }
     },
-    "C:\\Users\\sliwa\\workspacemain\\intelij\\dnp-reddit-clone1\\RedditClone\\Domain\\Domain.csproj": {
+    "C:\\Users\\Anna\\Documents\\Code\\Github Repos\\dnp-reddit-clone\\RedditClone\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\sliwa\\workspacemain\\intelij\\dnp-reddit-clone1\\RedditClone\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Users\\Anna\\Documents\\Code\\Github Repos\\dnp-reddit-clone\\RedditClone\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Users\\sliwa\\workspacemain\\intelij\\dnp-reddit-clone1\\RedditClone\\Domain\\Domain.csproj",
-        "packagesPath": "C:\\Users\\sliwa\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\sliwa\\workspacemain\\intelij\\dnp-reddit-clone1\\RedditClone\\Domain\\obj\\",
+        "projectPath": "C:\\Users\\Anna\\Documents\\Code\\Github Repos\\dnp-reddit-clone\\RedditClone\\Domain\\Domain.csproj",
+        "packagesPath": "C:\\Users\\Anna\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Anna\\Documents\\Code\\Github Repos\\dnp-reddit-clone\\RedditClone\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\sliwa\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Anna\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
@@ -117,17 +117,17 @@
         }
       }
     },
-    "C:\\Users\\sliwa\\workspacemain\\intelij\\dnp-reddit-clone1\\RedditClone\\FileData\\FileData.csproj": {
+    "C:\\Users\\Anna\\Documents\\Code\\Github Repos\\dnp-reddit-clone\\RedditClone\\EfcDataAccess\\EfcDataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\sliwa\\workspacemain\\intelij\\dnp-reddit-clone1\\RedditClone\\FileData\\FileData.csproj",
-        "projectName": "FileData",
-        "projectPath": "C:\\Users\\sliwa\\workspacemain\\intelij\\dnp-reddit-clone1\\RedditClone\\FileData\\FileData.csproj",
-        "packagesPath": "C:\\Users\\sliwa\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\sliwa\\workspacemain\\intelij\\dnp-reddit-clone1\\RedditClone\\FileData\\obj\\",
+        "projectUniqueName": "C:\\Users\\Anna\\Documents\\Code\\Github Repos\\dnp-reddit-clone\\RedditClone\\EfcDataAccess\\EfcDataAccess.csproj",
+        "projectName": "EfcDataAccess",
+        "projectPath": "C:\\Users\\Anna\\Documents\\Code\\Github Repos\\dnp-reddit-clone\\RedditClone\\EfcDataAccess\\EfcDataAccess.csproj",
+        "packagesPath": "C:\\Users\\Anna\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Anna\\Documents\\Code\\Github Repos\\dnp-reddit-clone\\RedditClone\\EfcDataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\sliwa\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Anna\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
@@ -139,8 +139,81 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\sliwa\\workspacemain\\intelij\\dnp-reddit-clone1\\RedditClone\\Application\\Application.csproj": {
-                "projectPath": "C:\\Users\\sliwa\\workspacemain\\intelij\\dnp-reddit-clone1\\RedditClone\\Application\\Application.csproj"
+              "C:\\Users\\Anna\\Documents\\Code\\Github Repos\\dnp-reddit-clone\\RedditClone\\Application\\Application.csproj": {
+                "projectPath": "C:\\Users\\Anna\\Documents\\Code\\Github Repos\\dnp-reddit-clone\\RedditClone\\Application\\Application.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.14, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.14, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[7.0.14, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Anna\\Documents\\Code\\Github Repos\\dnp-reddit-clone\\RedditClone\\FileData\\FileData.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Anna\\Documents\\Code\\Github Repos\\dnp-reddit-clone\\RedditClone\\FileData\\FileData.csproj",
+        "projectName": "FileData",
+        "projectPath": "C:\\Users\\Anna\\Documents\\Code\\Github Repos\\dnp-reddit-clone\\RedditClone\\FileData\\FileData.csproj",
+        "packagesPath": "C:\\Users\\Anna\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Anna\\Documents\\Code\\Github Repos\\dnp-reddit-clone\\RedditClone\\FileData\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Anna\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "C:\\Users\\Anna\\Documents\\Code\\Github Repos\\dnp-reddit-clone\\RedditClone\\Application\\Application.csproj": {
+                "projectPath": "C:\\Users\\Anna\\Documents\\Code\\Github Repos\\dnp-reddit-clone\\RedditClone\\Application\\Application.csproj"
               }
             }
           }
@@ -174,17 +247,17 @@
         }
       }
     },
-    "C:\\Users\\sliwa\\workspacemain\\intelij\\dnp-reddit-clone1\\RedditClone\\Shared\\Shared.csproj": {
+    "C:\\Users\\Anna\\Documents\\Code\\Github Repos\\dnp-reddit-clone\\RedditClone\\Shared\\Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\sliwa\\workspacemain\\intelij\\dnp-reddit-clone1\\RedditClone\\Shared\\Shared.csproj",
+        "projectUniqueName": "C:\\Users\\Anna\\Documents\\Code\\Github Repos\\dnp-reddit-clone\\RedditClone\\Shared\\Shared.csproj",
         "projectName": "Shared",
-        "projectPath": "C:\\Users\\sliwa\\workspacemain\\intelij\\dnp-reddit-clone1\\RedditClone\\Shared\\Shared.csproj",
-        "packagesPath": "C:\\Users\\sliwa\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\sliwa\\workspacemain\\intelij\\dnp-reddit-clone1\\RedditClone\\Shared\\obj\\",
+        "projectPath": "C:\\Users\\Anna\\Documents\\Code\\Github Repos\\dnp-reddit-clone\\RedditClone\\Shared\\Shared.csproj",
+        "packagesPath": "C:\\Users\\Anna\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Anna\\Documents\\Code\\Github Repos\\dnp-reddit-clone\\RedditClone\\Shared\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\sliwa\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Anna\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
@@ -233,17 +306,17 @@
         }
       }
     },
-    "C:\\Users\\sliwa\\workspacemain\\intelij\\dnp-reddit-clone1\\RedditClone\\WebAPI\\WebAPI.csproj": {
+    "C:\\Users\\Anna\\Documents\\Code\\Github Repos\\dnp-reddit-clone\\RedditClone\\WebAPI\\WebAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\sliwa\\workspacemain\\intelij\\dnp-reddit-clone1\\RedditClone\\WebAPI\\WebAPI.csproj",
+        "projectUniqueName": "C:\\Users\\Anna\\Documents\\Code\\Github Repos\\dnp-reddit-clone\\RedditClone\\WebAPI\\WebAPI.csproj",
         "projectName": "WebAPI",
-        "projectPath": "C:\\Users\\sliwa\\workspacemain\\intelij\\dnp-reddit-clone1\\RedditClone\\WebAPI\\WebAPI.csproj",
-        "packagesPath": "C:\\Users\\sliwa\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\sliwa\\workspacemain\\intelij\\dnp-reddit-clone1\\RedditClone\\WebAPI\\obj\\",
+        "projectPath": "C:\\Users\\Anna\\Documents\\Code\\Github Repos\\dnp-reddit-clone\\RedditClone\\WebAPI\\WebAPI.csproj",
+        "packagesPath": "C:\\Users\\Anna\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Anna\\Documents\\Code\\Github Repos\\dnp-reddit-clone\\RedditClone\\WebAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\sliwa\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Anna\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
@@ -255,14 +328,17 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\sliwa\\workspacemain\\intelij\\dnp-reddit-clone1\\RedditClone\\Application\\Application.csproj": {
-                "projectPath": "C:\\Users\\sliwa\\workspacemain\\intelij\\dnp-reddit-clone1\\RedditClone\\Application\\Application.csproj"
+              "C:\\Users\\Anna\\Documents\\Code\\Github Repos\\dnp-reddit-clone\\RedditClone\\Application\\Application.csproj": {
+                "projectPath": "C:\\Users\\Anna\\Documents\\Code\\Github Repos\\dnp-reddit-clone\\RedditClone\\Application\\Application.csproj"
               },
-              "C:\\Users\\sliwa\\workspacemain\\intelij\\dnp-reddit-clone1\\RedditClone\\FileData\\FileData.csproj": {
-                "projectPath": "C:\\Users\\sliwa\\workspacemain\\intelij\\dnp-reddit-clone1\\RedditClone\\FileData\\FileData.csproj"
+              "C:\\Users\\Anna\\Documents\\Code\\Github Repos\\dnp-reddit-clone\\RedditClone\\EfcDataAccess\\EfcDataAccess.csproj": {
+                "projectPath": "C:\\Users\\Anna\\Documents\\Code\\Github Repos\\dnp-reddit-clone\\RedditClone\\EfcDataAccess\\EfcDataAccess.csproj"
               },
-              "C:\\Users\\sliwa\\workspacemain\\intelij\\dnp-reddit-clone1\\RedditClone\\Shared\\Shared.csproj": {
-                "projectPath": "C:\\Users\\sliwa\\workspacemain\\intelij\\dnp-reddit-clone1\\RedditClone\\Shared\\Shared.csproj"
+              "C:\\Users\\Anna\\Documents\\Code\\Github Repos\\dnp-reddit-clone\\RedditClone\\FileData\\FileData.csproj": {
+                "projectPath": "C:\\Users\\Anna\\Documents\\Code\\Github Repos\\dnp-reddit-clone\\RedditClone\\FileData\\FileData.csproj"
+              },
+              "C:\\Users\\Anna\\Documents\\Code\\Github Repos\\dnp-reddit-clone\\RedditClone\\Shared\\Shared.csproj": {
+                "projectPath": "C:\\Users\\Anna\\Documents\\Code\\Github Repos\\dnp-reddit-clone\\RedditClone\\Shared\\Shared.csproj"
               }
             }
           }

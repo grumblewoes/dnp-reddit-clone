@@ -6,5 +6,4 @@ public class PostCreationDTO
     public string NickName { get; set; }
     public string Body { get; set; }
     
-    
 }
