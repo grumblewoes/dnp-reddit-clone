@@ -23,11 +23,7 @@ public class UserLogic : IUserLogic
 
         //then check that it follows legal rules, then add it
         ValidateData(userToCreate);
-        User toCreate = new User
-        {//set the details. this is what appears in Swagger when you try it out
-            Username = userToCreate.Username,
-            Password = userToCreate.Password
-        };
+        User toCreate = new User(userToCreate.Username, userToCreate.Password);
 
         User created = await userDAO.CreateAsync(toCreate);
         return created;
